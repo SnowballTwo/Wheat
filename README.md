@@ -8,7 +8,7 @@ SnowballTwo's field of useful tools and libraries.
 
 ### `BitReader`
 
-```
+```csharp
 var data = new byte[] { 0b11000000, 0b00001111, 0b11111100 };
 
 using ( var stream = new MemoryStream( data ) )
@@ -21,7 +21,7 @@ using ( var reader = new BitReader( stream ) )
 
 ### BitWriter
 
-```
+```csharp
 using ( var stream = new MemoryStream() )
 using ( var writer = new BitWriter( stream ) )
 {
