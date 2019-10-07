@@ -11,6 +11,13 @@
     <FileVersion>1.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Wheat.IO</PackageId>
+    <Copyright>Jan Schneider</Copyright>
+    <PackageProjectUrl>https://github.com/SnowballTwo/Wheat</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/SnowballTwo/Wheat/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/SnowballTwo/Wheat/blob/master/icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/SnowballTwo/Wheat</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>stream;bit;bitwise;bitstream;io;bitreader;bitwriter;binarywriter;binaryreader</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

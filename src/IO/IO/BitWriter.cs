@@ -21,8 +21,12 @@ namespace Wheat.IO
         ///     Indicates, whether the underlying stream should be closed when the writer is closed or
         ///     disposed.
         /// </param>
+        /// <exception cref="NotSupportedException">Big endian systems are not supported by BitWriter.</exception>
         public BitWriter( Stream output, bool leaveOpen = false )
         {
+            if ( !BitConverter.IsLittleEndian )
+                throw new NotSupportedException( $"Big endian systems are not supported by {nameof( BitWriter )}" );
+
             _BaseStream = output ?? throw new ArgumentNullException( nameof( output ) );
             _LeaveOpen = leaveOpen;
         }
