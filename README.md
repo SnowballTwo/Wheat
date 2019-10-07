@@ -15,7 +15,9 @@ using ( var stream = new MemoryStream( data ) )
 using ( var reader = new BitReader( stream ) )
 {
     for ( var i = 0; i < 24; i++ )
-       Console.Write( reader.ReadBit() );
+        Console.Write( reader.ReadBit() );
+
+    //Output: 000000111111000000111111
 }
 ```
 
@@ -26,9 +28,12 @@ using ( var stream = new MemoryStream() )
 using ( var writer = new BitWriter( stream ) )
 {
     for ( var i = 0; i < 24; i++ )
-        writer.WriteBit( (byte) ( i / 6 % 2 ) );
+        writer.WriteBit( (byte) ( i / 4 % 2 ) );
 
-    Console.WriteLine( stream.ToArray() );
+    foreach ( var b in stream.ToArray() )
+        Console.Write( $"{b:x2}" );
+        
+    //Output: F0F0F0
 }
 ```
 
