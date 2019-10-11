@@ -1,9 +1,8 @@
 using System;
 using System.IO;
 using NUnit.Framework;
-using Wheat.IO;
 
-namespace Wist.IO.Test
+namespace Wheat.IO.Test
 {
     public class BitReaderTest
     {

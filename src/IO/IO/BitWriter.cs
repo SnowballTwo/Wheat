@@ -183,14 +183,6 @@ namespace Wheat.IO
                 WriteBit( (byte) ( ( value & ( 1UL << i ) ) >> i ) );
         }
 
-        /// <summary>
-        ///     Closes the writer and writes pending bits to the underlying base stream.
-        /// </summary>
-        public void Close()
-        {
-            Dispose( true );
-        }
-
         private void Dispose( bool disposing )
         {
             if ( !disposing )
@@ -206,7 +198,7 @@ namespace Wheat.IO
             var copyOfStream = _BaseStream;
             _BaseStream = null;
             if ( copyOfStream != null && !_LeaveOpen )
-                copyOfStream.Close();
+                copyOfStream.Dispose();
         }
     }
 }

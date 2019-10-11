@@ -253,14 +253,6 @@ namespace Wheat.IO
             return BitConverter.ToUInt64( bytes, 0 );
         }
 
-        /// <summary>
-        ///     Closes the reader.
-        /// </summary>
-        public void Close()
-        {
-            Dispose( true );
-        }
-
         private void Dispose( bool disposing )
         {
             if ( !disposing )
@@ -269,7 +261,7 @@ namespace Wheat.IO
             var copyOfStream = _BaseStream;
             _BaseStream = null;
             if ( copyOfStream != null && !_LeaveOpen )
-                copyOfStream.Close();
+                copyOfStream.Dispose();
         }
     }
 }

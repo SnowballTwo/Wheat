@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>Wheat.IO</RootNamespace>
     <AssemblyName>Wheat.IO</AssemblyName>
     <Title>Wheat.IO</Title>
     <Authors>Jan Schneider</Authors>
     <Description>Provides helper classes for Bitwise IO</Description>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>0.0.2</AssemblyVersion>
+    <FileVersion>0.0.2</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Wheat.IO</PackageId>
     <Copyright>Jan Schneider</Copyright>
-    <PackageProjectUrl>https://github.com/SnowballTwo/Wheat</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/SnowballTwo/Wheat/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/SnowballTwo/Wheat</PackageProjectUrl>    
+    <License>BSD 3-Clause "New" or "Revised" License</License>
     <PackageIconUrl>https://github.com/SnowballTwo/Wheat/blob/master/icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/SnowballTwo/Wheat</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>stream;bit;bitwise;bitstream;io;bitreader;bitwriter;binarywriter;binaryreader</PackageTags>
+    <PackageVersion>0.0.2</PackageVersion>
+    <TargetFrameworks>net40;netstandard1.0;netcoreapp2.1</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
